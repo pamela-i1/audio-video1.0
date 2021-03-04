@@ -42,11 +42,8 @@ namespace Composer\Autoload;
  */
 class ClassLoader
 {
-<<<<<<< HEAD
-=======
     private $vendorDir;
 
->>>>>>> cb5b47ba0bd0450ba713000b1ebf520901a28d8d
     // PSR-4
     private $prefixLengthsPsr4 = array();
     private $prefixDirsPsr4 = array();
@@ -62,8 +59,6 @@ class ClassLoader
     private $missingClasses = array();
     private $apcuPrefix;
 
-<<<<<<< HEAD
-=======
     private static $registeredLoaders = array();
 
     public function __construct($vendorDir = null)
@@ -71,7 +66,6 @@ class ClassLoader
         $this->vendorDir = $vendorDir;
     }
 
->>>>>>> cb5b47ba0bd0450ba713000b1ebf520901a28d8d
     public function getPrefixes()
     {
         if (!empty($this->prefixesPsr0)) {
@@ -315,8 +309,6 @@ class ClassLoader
     public function register($prepend = false)
     {
         spl_autoload_register(array($this, 'loadClass'), true, $prepend);
-<<<<<<< HEAD
-=======
 
         if (null === $this->vendorDir) {
             //no-op
@@ -326,7 +318,6 @@ class ClassLoader
             unset(self::$registeredLoaders[$this->vendorDir]);
             self::$registeredLoaders[$this->vendorDir] = $this;
         }
->>>>>>> cb5b47ba0bd0450ba713000b1ebf520901a28d8d
     }
 
     /**
@@ -335,13 +326,10 @@ class ClassLoader
     public function unregister()
     {
         spl_autoload_unregister(array($this, 'loadClass'));
-<<<<<<< HEAD
-=======
 
         if (null !== $this->vendorDir) {
             unset(self::$registeredLoaders[$this->vendorDir]);
         }
->>>>>>> cb5b47ba0bd0450ba713000b1ebf520901a28d8d
     }
 
     /**
@@ -401,8 +389,6 @@ class ClassLoader
         return $file;
     }
 
-<<<<<<< HEAD
-=======
     /**
      * Returns the currently registered loaders indexed by their corresponding vendor directories.
      *
@@ -413,7 +399,6 @@ class ClassLoader
         return self::$registeredLoaders;
     }
 
->>>>>>> cb5b47ba0bd0450ba713000b1ebf520901a28d8d
     private function findFileWithExtension($class, $ext)
     {
         // PSR-4 lookup

@@ -14,14 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
     return view('welcome');
 })->name('main');
-=======
-    return view('welcome.blade.php');
-});
-
-Route::get('/index', function () {
-    return view ('index.blade.php');
-});
->>>>>>> cb5b47ba0bd0450ba713000b1ebf520901a28d8d
