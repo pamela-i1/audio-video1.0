@@ -56,6 +56,10 @@ trait Rounding
             'microsecond' => [0, 999999],
         ]);
         $factor = 1;
+<<<<<<< HEAD
+=======
+        $initialMonth = $this->month;
+>>>>>>> cb5b47ba0bd0450ba713000b1ebf520901a28d8d
 
         if ($normalizedUnit === 'week') {
             $normalizedUnit = 'day';
@@ -115,7 +119,11 @@ trait Rounding
             $result = $result->$unit($value);
         }
 
+<<<<<<< HEAD
         return $normalizedUnit === 'month'
+=======
+        return $normalizedUnit === 'month' && $precision <= 1 && abs($result->month - $initialMonth) === 2
+>>>>>>> cb5b47ba0bd0450ba713000b1ebf520901a28d8d
             // Re-run the change in case an overflow occurred
             ? $result->$normalizedUnit($normalizedValue)
             : $result;
